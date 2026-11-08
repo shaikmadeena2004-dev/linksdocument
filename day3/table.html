@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Table</title>
+
+    <style>
+        body {
+            font-family: "Times New Roman", serif;
+            background-color: white;
+            margin: 30px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 28px;
+        }
+
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            min-width: 1050px;
+            border-collapse: collapse;
+            border: 6px solid #555;
+            text-align: center;
+        }
+
+        th, td {
+            border: 2px solid #555;
+            padding: 18px 10px;
+            font-size: 18px;
+        }
+
+        th {
+            font-weight: bold;
+        }
+
+        .day {
+            font-weight: bold;
+            white-space: nowrap;
+        }
+
+        .lunch {
+            font-size: 25px;
+            font-weight: bold;
+            letter-spacing: 5px;
+            padding: 10px;
+            width: 90px;
+        }
+
+        .lunch span {
+            display: inline-block;
+            line-height: 1.2;
+        }
+
+        .lab, .library, .seminar, .sports {
+            font-weight: normal;
+        }
+
+        .time {
+            font-size: 16px;
+            white-space: nowrap;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                margin: 10px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>TIME TABLE</h1>
+
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Day/Period</th>
+                    <th>I<br><span class="time">9:30-10:20</span></th>
+                    <th>II<br><span class="time">10:20-11:10</span></th>
+                    <th>III<br><span class="time">11:10-12:00</span></th>
+                    <th>
+                        <span class="time">12:00-12:40</span><br>
+                        <small>LUNCH</small>
+                    </th>
+                    <th>IV<br><span class="time">12:40-1:30</span></th>
+                    <th>V<br><span class="time">1:30-2:20</span></th>
+                    <th>VI<br><span class="time">2:20-3:10</span></th>
+                    <th>VII<br><span class="time">3:10-4:00</span></th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <!-- MONDAY -->
+                <tr>
+                    <td class="day">Monday</td>
+                    <td>Eng</td>
+                    <td>Mat</td>
+                    <td>Che</td>
+                    <td class="lunch" rowspan="6">
+                        <span>L<br>U<br>N<br>C<br>H</span>
+                    </td>
+                    <td class="lab" colspan="3">LAB</td>
+                    <td>Phy</td>
+                </tr>
+
+                <!-- TUESDAY -->
+                <tr>
+                    <td class="day">Tuesday</td>
+                    <td class="lab" colspan="3">LAB</td>
+                    <td>Eng</td>
+                    <td>Che</td>
+                    <td>Mat</td>
+                    <td class="sports">SPORTS</td>
+                </tr>
+
+                <!-- WEDNESDAY -->
+                <tr>
+                    <td class="day">Wednesday</td>
+                    <td>Mat</td>
+                    <td>phy</td>
+                    <td>Eng</td>
+                    <td>Che</td>
+                    <td class="library" colspan="3">LIBRARY</td>
+                </tr>
+
+                <!-- THURSDAY -->
+                <tr>
+                    <td class="day">Thursday</td>
+                    <td>Phy</td>
+                    <td>Eng</td>
+                    <td>Che</td>
+                    <td class="lab" colspan="3">LAB</td>
+                    <td>Mat</td>
+                </tr>
+
+                <!-- FRIDAY -->
+                <tr>
+                    <td class="day">Friday</td>
+                    <td class="lab" colspan="3">LAB</td>
+                    <td>Mat</td>
+                    <td>Che</td>
+                    <td>Eng</td>
+                    <td>Phy</td>
+                </tr>
+
+                <!-- SATURDAY -->
+                <tr>
+                    <td class="day">Saturday</td>
+                    <td>Eng</td>
+                    <td>Che</td>
+                    <td>Mat</td>
+                    <td class="seminar" colspan="3">SEMINAR</td>
+                    <td class="sports">SPORTS</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>
+
