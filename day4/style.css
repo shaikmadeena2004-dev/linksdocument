@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    
+}
+
+body {
+    font-family: Georgia, serif;
+    background: white;
+    color: black;
+    padding: 15px;
+    line-height: 1.4;
+}
+
+.container {
+    width: 100%;
+    max-width: 1400px;
+    margin: auto;
+}
+
+header {
+    text-align: center;
+
+    padding: 18px;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 38px;
+    margin-bottom: 5px;
+}
+
+header p {
+    font-size: 15px;
+    letter-spacing: 4px;
+}
+
+section {
+    margin-bottom: 18px;
+}
+
+h2 {
+    font-size: 22px;
+    padding: 8px;
+    margin-bottom: 12px;
+    border-bottom: none;
+}
+
+h3 {
+    font-size: 15px;
+    margin-bottom: 6px;
+}
+
+.departments {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.events {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+}
+
+.registration {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+}
+
+.two-sections {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+
+
+.roadmap {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.definitions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+ul, ol {
+    padding-left: 25px;
+}
+
+li {
+    padding: 2px 0;
+    font-size: 14px;
+}
+
+dt {
+    font-weight: bold;
+    
+}
+
+dd {
+    margin-left: 15px;
+   
+}
+
+@media (max-width: 900px) {
+    .events,
+    .registration {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .departments,
+    .roadmap {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .departments,
+    .events,
+    .registration,
+    .two-sections,
+    .roadmap,
+    .definitions {
+        grid-template-columns: 1fr;
+    }
+
+    header h1 {
+        font-size: 26px;
+    }
+
+    header p {
+        font-size: 12px;
+        letter-spacing: 2px;
+    }
+}
